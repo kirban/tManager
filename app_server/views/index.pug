@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    div.container
+        div.row
+            ul.navigation.nav.nav-tabs.flex-column
+                li.nav-item
+                    a.nav-link.active.show(data-toggle='tab', href='index')= 'Текущие задачи  '
+                        span.badge.badge-pill.badge-info= '8'
+                li.nav-item
+                    a.nav-link(data-toggle='tab', href='completed')= 'Завершенные задачи  '
+                        span.badge.badge-pill.badge-secondary= '3'
+                li.nav-item
+                    a.btn.btn-warning.col-md-6.offset-3(href='#')
+                        strong='+'
+                    //span.glyphicon.glyphicon-plus-sign    TODO: исправить ошибку ( не отображается glyphicon)
+            ul.cards-list
+                li.cards-item
+                    div.card.text-white.bg-dark.mb-3(style='max-width: 20rem;')
+                        div.card-header
+                            h4='Название'
+                            a.card-link(href='#')='Редактировать'
+                            a.card-link(href='#')='Удалить'
+                        div.card-body
+                            h5.card-title.text-primary= 'Дедлайн'
+                            p.card-text= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
+                        div.card-footer
+                            button.badge.badge-pill.badge-light= '#hashtag1'
+                            button.badge.badge-pill.badge-light= '#hashtag2'
