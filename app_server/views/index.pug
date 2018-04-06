@@ -3,17 +3,18 @@ extends layout
 block content
     div.container
         div.row
-            ul.navigation.nav.nav-tabs.flex-column
-                li.nav-item
+            ul.navigation.nav.nav-tabs.col-md-12
+                li.nav-item.col-md-4
                     a.nav-link.active.show(data-toggle='tab', href='index')= 'Текущие задачи  '
                         span.badge.badge-pill.badge-info= '8'
-                li.nav-item
+                li.nav-item.col-md-4
                     a.nav-link(data-toggle='tab', href='completed')= 'Завершенные задачи  '
                         span.badge.badge-pill.badge-secondary= '3'
-                li.nav-item
+                li.nav-item.col-md-4
                     a.btn.btn-warning.col-md-6.offset-3(href='#')
                         strong='+'
                     //span.glyphicon.glyphicon-plus-sign    TODO: исправить ошибку ( не отображается glyphicon)
+        div.row
             ul.cards-list
                 li.cards-item
                     div.card.text-white.bg-dark.mb-3(style='max-width: 20rem;')
