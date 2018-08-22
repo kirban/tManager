@@ -1,0 +1,23 @@
+{
+  "name": "tmanager",
+  "version": "0.0.1",
+  "description": "Task manager application",
+  "main": "server/index.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "no test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirban/tManager.git"
+  },
+  "author": "Kirill Romanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirban/tManager/issues"
+  },
+  "homepage": "https://github.com/kirban/tManager#readme"
+}
