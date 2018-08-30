@@ -9,6 +9,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TaskComponent } from './task/task.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import {RouterModule, Routes} from "@angular/router";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  {path: 'dashboard', component: DashboardComponent, data: { title: 'tManager Dashboard' } },
+  {path: 'login', component: LoginComponent, data: { title: 'Log In | tManager' } },
+  {path: 'signup', component: SignupComponent, data: { title: 'Sign Up | tManager' } },
+  { path: '**', component: PageNotFoundComponent, data: { title: 'Page Not Found | tManager' } }
+];
 
 @NgModule({
   declarations: [
@@ -16,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
     DashboardComponent,
     TaskComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +36,12 @@ import { SignupComponent } from './signup/signup.component';
     MatCheckboxModule,
     MatCardModule,
     MatInputModule,
+
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+    // other imports here
 
   ],
   providers: [],
